@@ -1,4 +1,4 @@
-package todo;
+package fr.lernejo.todo;
 
 import java.time.YearMonth;
 
