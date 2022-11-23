@@ -8,8 +8,7 @@ RUN mvn -f /home/app/pom.xml clean package
 # (3)
 FROM eclipse-temurin:17-jdk-focal
 # (4)
-COPY --from=build /home/app/target/maven_training-1.0.0-SNAPSHOT.jar  /usr/local/lib/app.jar
-# C:/Program Files/JetBrains/IntelliJ IDEA 2022.2.3/lib/app.jar
+COPY --from=build /home/app/target/maven_training-1.0.0-SNAPSHOT.jar /usr/local/lib/app.jar
 # (5)
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/app.jar"]
